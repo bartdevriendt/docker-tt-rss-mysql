@@ -25,7 +25,7 @@ RUN sed -i -e 's/;\(clear_env\) = .*/\1 = no/i' \
 		-e 's/^\(user\|group\) = .*/\1 = app/i' \
 		-e 's/;\(php_admin_value\[error_log\]\) = .*/\1 = \/tmp\/error.log/' \
 		-e 's/;\(php_admin_flag\[log_errors\]\) = .*/\1 = on/' \
-        /etc/php/8.1/fpm/pool.d/www.conf
+        /etc/php/8.2/fpm/pool.d/www.conf
 RUN mkdir -p ${SCRIPT_ROOT}/config.d /etc/nginx/global /var/www/tt-rss
 
 # Configure Image
