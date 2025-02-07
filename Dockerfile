@@ -8,6 +8,8 @@ ENV SCRIPT_ROOT=/opt/tt-rss
 VOLUME /var/www/html
 VOLUME ${SCRIPT_ROOT}/config.d
 
+RUN add-apt-repository ppa:ondrej/php
+RUN apt update
 # Install software
 RUN apt-get -qq update -y && apt-get -qq upgrade -y && apt-get -qq install git curl sudo -y
 RUN apt-get -qq install nginx-core -y
