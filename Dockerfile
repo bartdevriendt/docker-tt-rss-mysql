@@ -11,10 +11,10 @@ VOLUME ${SCRIPT_ROOT}/config.d
 # Install software
 RUN apt-get -qq update -y && apt-get -qq upgrade -y && apt-get -qq install git curl sudo -y
 RUN apt-get -qq install nginx-core -y
-RUN apt-get -qq install php php-fpm php-common php-apcu \
-    php-gd php-pgsql php-pdo-mysql php-xml php-opcache \
-    php-mbstring php-intl php-xml php-curl php-tokenizer \
-    php-json php-zip -y
+RUN apt-get -qq install php8.2 php8.2-fpm php8.2-common php8.2-apcu \
+    php8.2-gd php8.2-pgsql php8.2-pdo-mysql php8.2-xml php8.2-opcache \
+    php8.2-mbstring php8.2-intl php8.2-xml php8.2-curl php8.2-tokenizer \
+    php8.2-json php8.2-zip -y
 RUN apt-get -qq install mysql-client rsync tzdata -y
 RUN apt-get -qq install supervisor -y
 RUN rm -rf /tmp/* /var/lib/apt/lists/* /var/tmp/*
