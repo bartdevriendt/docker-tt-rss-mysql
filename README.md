@@ -17,7 +17,7 @@ This Docker image has several assumptions/prerequisites which need to be  fulfil
 1. This image is for domains or sub-domains with **/tt-rss/** in the URL. e.g. **http://reader.mydomain.tld**
 1. MySQL needs to be installed in a separate Docker container.
 1. MySQL needs to be configured and setup **BEFORE** this image is deployed (explained below).
-1. If a previous MySQL instance is used and and old TT-RSS instance was using PHP 7.x then a "Data Fix" will need to be applied to the database as this image used PHP 8.1 and generates JSON differently. Failure to "Data Fix" the database could result in duplicate posts appearing in TT-RSS (explained below)
+1. If a previous MySQL instance is used and and old TT-RSS instance was using PHP 7.x then a "Data Fix" will need to be applied to the database as this image used PHP 8.2 and generates JSON differently. Failure to "Data Fix" the database could result in duplicate posts appearing in TT-RSS (explained below)
 
 ## MySQL Setup
 

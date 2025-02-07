@@ -42,7 +42,7 @@ COPY config/supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 # forward request and error logs to docker log collector
 RUN ln -sf /dev/stdout /var/log/nginx/access.log \
 	&& ln -sf /dev/stderr /var/log/nginx/error.log \
-	&& ln -sf /dev/stderr /var/log/php8.1-fpm.log
+	&& ln -sf /dev/stderr /var/log/php8.2-fpm.log
 
 # HTTP
 EXPOSE 80/tcp
