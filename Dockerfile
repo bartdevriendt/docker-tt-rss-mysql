@@ -8,7 +8,7 @@ ENV SCRIPT_ROOT=/opt/tt-rss
 VOLUME /var/www/html
 VOLUME ${SCRIPT_ROOT}/config.d
 
-RUN apt update && apt install software-properties-common
+RUN apt update && apt install software-properties-common -y
 RUN add-apt-repository ppa:ondrej/php
 RUN apt update
 # Install software
