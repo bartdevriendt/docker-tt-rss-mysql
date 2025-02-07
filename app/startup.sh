@@ -80,11 +80,11 @@ done
 # Configure PHP
 echo "Setting PHP memory_limit to ${PHP_WORKER_MEMORY_LIMIT}"
 sed -i.bak "s/^\(memory_limit\) = \(.*\)/\1 = ${PHP_WORKER_MEMORY_LIMIT}/" \
-	/etc/php/8.1/fpm/php.ini
+	/etc/php/8.2/fpm/php.ini
 
 echo "Setting PHP pm.max_children to ${PHP_WORKER_MAX_CHILDREN}"
 sed -i.bak "s/^\(pm.max_children\) = \(.*\)/\1 = ${PHP_WORKER_MAX_CHILDREN}/" \
-	/etc/php/8.1/fpm/pool.d/www.conf
+	/etc/php/8.2/fpm/pool.d/www.conf
 
 # Update schema if necessary
 sudo -Eu app ${TTRSS_PHP_EXECUTABLE} $DST_DIR/update.php --update-schema=force-yes
