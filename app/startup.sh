@@ -86,6 +86,9 @@ echo "Setting PHP pm.max_children to ${PHP_WORKER_MAX_CHILDREN}"
 sed -i.bak "s/^\(pm.max_children\) = \(.*\)/\1 = ${PHP_WORKER_MAX_CHILDREN}/" \
 	/etc/php/8.2/fpm/pool.d/www.conf
 
+
+echo "Using php executable ${TTRSS_PHP_EXECUTABLE}"
+
 # Update schema if necessary
 sudo -Eu app ${TTRSS_PHP_EXECUTABLE} $DST_DIR/update.php --update-schema=force-yes
 
