@@ -86,4 +86,4 @@ RUN chmod 755 /startup.sh
 
 CMD ["/startup.sh"]
 
-LABEL maintainer="me@alandoyle.com"
+LABEL maintainer="bart@bdsoft.be"
