@@ -86,4 +86,4 @@ RUN chmod 755 /startup.sh
 
 CMD ["/startup.sh"]
 
-LABEL maintainer="bart@bdsoft.be"
+LABEL maintainer="Bart Devriendt"
